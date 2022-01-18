@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+$Strong-cyan: #26c0ab;
+$very-dark-cyan: #00494d;
+$Dark-grayish-cyan: #5e7a7d;
+$Dark-grayish-cyan-2: #7f9c9f;
+$Light-grayish-cyan: #c5e4e7;
+$Light-grayish-cyan: #f4fafa;
+$White: #ffffff;
+$input-backg: #f3f9fa;
+
+body {
+  background-color: $Light-grayish-cyan;
+  font-family: "Space Mono", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  main#splitter-body {
+    width: 375px;
+    height: 933px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1024px) and (max-width: 1440px) {
+      width: 1440px;
+      height: 1024px;
+    }
+    img {
+      width: 86.66px;
+      height: 53.14px;
+      margin-top: 50px;
+      @media (min-width: 1024px) and (max-width: 1440px) {
+        margin-top: 163px;
+      }
+    }
+    article {
+      width: 375px;
+      height: 789px;
+      background-color: #ffffff;
+      box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40.86px;
+      @media (min-width: 1024px) and (max-width: 1440px) {
+        width: 920px;
+        height: 481px;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 78.86px;
+      }
+      section#facture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+          width: 379px;
+          height: 388px;
+        }
+        div#somme {
+          width: 311px;
+          height: 78px;
+          margin-top: 32px;
+          display: flex;
+          flex-direction: column;
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            width: 379px;
+            margin-top: 0;
+          }
+          label {
+            color: $Dark-grayish-cyan;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+          }
+          input {
+            height: 48px;
+            background-color: $input-backg;
+            border: none;
+            margin-top: 6px;
+            background-image: url(/images/icon-dollar.svg);
+            background-repeat: no-repeat;
+            background-position: left 19px center;
+            text-align: right;
+            color: $very-dark-cyan;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 35.554px;
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              width: 379px;
+            }
+          }
+        }
+        div#pourcentage-tip {
+          width: 311px;
+          height: 216px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0;
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            width: 379px;
+            height: 152px;
+            margin-top: 40px;
+          }
+          p {
+            color: $Dark-grayish-cyan;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+          }
+          div#button-pourcentage {
+            display: flex;
+            width: 311px;
+            height: 176px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              width: 379px;
+              height: 152px;
+            }
+            button {
+              width: 146.63px;
+              height: 48px;
+              background-color: $very-dark-cyan;
+              color: white;
+              font-weight: bold;
+              font-size: 24px;
+              margin-bottom: 16px;
+              @media (min-width: 1024px) and (max-width: 1440px) {
+                width: 117px;
+              }
+              &:focus {
+                color: $very-dark-cyan;
+                background-color: $Strong-cyan;
+              }
+            }
+            input {
+              width: 146.63px;
+              height: 48px;
+              background-color: $input-backg;
+              text-align: center;
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 35.54pc;
+              @media (min-width: 1024px) and (max-width: 1440px) {
+                width: 117px;
+              }
+            }
+            input,
+            button {
+              border: none;
+              border-radius: 5px;
+            }
+          }
+        }
+        div#nombre-pers {
+          width: 311px;
+          height: 78px;
+          margin-top: 32px;
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            width: 379px;
+          }
+          label {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $Dark-grayish-cyan;
+          }
+          input {
+            height: 48px;
+            background-color: $input-backg;
+            border: none;
+            margin-top: 6px;
+            background-image: url(/images/icon-person.svg);
+            background-repeat: no-repeat;
+            background-position: left 19px center;
+            text-align: right;
+            color: $very-dark-cyan;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 35.554px;
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              width: 379px;
+            }
+          }
+        }
+      }
+      section#resultat {
+        width: 327px;
+        height: 257px;
+        background-color: $very-dark-cyan;
+        border-radius: 15px;
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+          width: 413px;
+          height: 417px;
+          justify-content: space-around;
+          margin-top: 0;
+        }
+        div#montant-total-pers {
+          width: 281px;
+          height: 116px;
+          margin-left: 24px;
+          margin-top: 37px;
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            width: 333px;
+            height: 142px;
+          }
+          div#total-tip-pers,
+          div#total-pers {
+            width: 281px;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              height: 71px;
+            }
+            p.text-total {
+              width: 98px;
+              height: 44px;
+              color: $White;
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 24px;
+              span {
+                color: $Dark-grayish-cyan-2;
+                font-size: 13px;
+                line-height: 19px;
+              }
+            }
+            p#tips-person,
+            p#total-person {
+              width: 96px;
+              height: 47px;
+              font-weight: bold;
+              font-size: 32px;
+              line-height: 47px;
+              text-align: right;
+              letter-spacing: -0.666667px;
+              color: #26c2ae;
+              @media (min-width: 1024px) and (max-width: 1440px) {
+                font-size: 48px;
+                line-height: 71px;
+              }
+            }
+          }
+          div#total-pers {
+            p.text-total {
+              width: 64px;
+              height: 44px;
+            }
+          }
+        }
+        button {
+          width: 281px;
+          height: 48px;
+          background: #26c2ae;
+          border-radius: 5px;
+          color: $very-dark-cyan;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 30px;
+          text-align: center;
+          margin-top: 41px;
+          border: none;
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            width: 333px;
+          }
+        }
+      }
+    }
+  }
+}
