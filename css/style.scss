@@ -15,6 +15,10 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 
   main#splitter-body {
     width: 375px;
@@ -61,7 +65,7 @@ body {
         }
         div#somme {
           width: 311px;
-          height: 78px;
+          height: 108px;
           margin-top: 32px;
           display: flex;
           flex-direction: column;
@@ -79,6 +83,8 @@ body {
             height: 48px;
             background-color: $input-backg;
             border: none;
+            outline-style: none;
+            border-radius: 5px;
             margin-top: 6px;
             background-image: url(/images/icon-dollar.svg);
             background-repeat: no-repeat;
@@ -88,6 +94,11 @@ body {
             font-weight: bold;
             font-size: 24px;
             line-height: 35.554px;
+
+            &:focus {
+              border: 3px solid green;
+            }
+
             @media (min-width: 1024px) and (max-width: 1440px) {
               width: 379px;
             }
@@ -145,6 +156,10 @@ body {
               font-weight: bold;
               font-size: 24px;
               line-height: 35.54pc;
+              outline-style: none;
+              &:focus {
+                border: 3px solid green;
+              }
               @media (min-width: 1024px) and (max-width: 1440px) {
                 width: 117px;
               }
@@ -160,14 +175,38 @@ body {
           width: 311px;
           height: 78px;
           margin-top: 32px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
           @media (min-width: 1024px) and (max-width: 1440px) {
             width: 379px;
           }
           label {
+            width: 311px;
             font-weight: bold;
             font-size: 16px;
             line-height: 24px;
             color: $Dark-grayish-cyan;
+            display: flex;
+
+            span {
+              width: 154px;
+              text-align: right;
+              justify-content: flex-end;
+              color: #E17457;
+              @media (min-width: 1024px) and (max-width: 1440px) {
+                width: 210px;
+              }
+            }
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              width: 379px;
+              // height: auto;
+            }
+          }
+          p {
+            width: auto;
+            color: green;
+            text-align: right;
           }
           input {
             height: 48px;
@@ -179,9 +218,20 @@ body {
             background-position: left 19px center;
             text-align: right;
             color: $very-dark-cyan;
+            border-radius: 5px;
             font-weight: bold;
             font-size: 24px;
             line-height: 35.554px;
+            outline-style: none;
+
+            &:focus {
+              border: 3px solid green;
+              &.error{
+                border: 3px solid #E17457;
+  
+              }
+            }
+
             @media (min-width: 1024px) and (max-width: 1440px) {
               width: 379px;
             }

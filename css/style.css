@@ -14,6 +14,11 @@ body {
   margin: 0;
 }
 
+body input::-webkit-outer-spin-button,
+body input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 body main#splitter-body {
   width: 375px;
   height: 933px;
@@ -104,7 +109,7 @@ body main#splitter-body article section#facture {
 
 body main#splitter-body article section#facture div#somme {
   width: 311px;
-  height: 78px;
+  height: 108px;
   margin-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,6 +138,8 @@ body main#splitter-body article section#facture div#somme input {
   height: 48px;
   background-color: #f3f9fa;
   border: none;
+  outline-style: none;
+  border-radius: 5px;
   margin-top: 6px;
   background-image: url(/images/icon-dollar.svg);
   background-repeat: no-repeat;
@@ -142,6 +149,10 @@ body main#splitter-body article section#facture div#somme input {
   font-weight: bold;
   font-size: 24px;
   line-height: 35.554px;
+}
+
+body main#splitter-body article section#facture div#somme input:focus {
+  border: 3px solid green;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -230,6 +241,11 @@ body main#splitter-body article section#facture div#pourcentage-tip div#button-p
   font-weight: bold;
   font-size: 24px;
   line-height: 35.54pc;
+  outline-style: none;
+}
+
+body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input:focus {
+  border: 3px solid green;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -248,6 +264,15 @@ body main#splitter-body article section#facture div#nombre-pers {
   width: 311px;
   height: 78px;
   margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -257,10 +282,41 @@ body main#splitter-body article section#facture div#nombre-pers {
 }
 
 body main#splitter-body article section#facture div#nombre-pers label {
+  width: 311px;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   color: #5e7a7d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main#splitter-body article section#facture div#nombre-pers label span {
+  width: 154px;
+  text-align: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #E17457;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body main#splitter-body article section#facture div#nombre-pers label span {
+    width: 210px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body main#splitter-body article section#facture div#nombre-pers label {
+    width: 379px;
+  }
+}
+
+body main#splitter-body article section#facture div#nombre-pers p {
+  width: auto;
+  color: green;
+  text-align: right;
 }
 
 body main#splitter-body article section#facture div#nombre-pers input {
@@ -273,9 +329,19 @@ body main#splitter-body article section#facture div#nombre-pers input {
   background-position: left 19px center;
   text-align: right;
   color: #00494d;
+  border-radius: 5px;
   font-weight: bold;
   font-size: 24px;
   line-height: 35.554px;
+  outline-style: none;
+}
+
+body main#splitter-body article section#facture div#nombre-pers input:focus {
+  border: 3px solid green;
+}
+
+body main#splitter-body article section#facture div#nombre-pers input:focus.error {
+  border: 3px solid #E17457;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
