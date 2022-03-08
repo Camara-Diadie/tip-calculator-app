@@ -15,26 +15,24 @@
         <section id="facture">
           <div id="somme">
             <label for="total-somme" > Bill</label>
-            <input type="number" min="0" id="facture-befor" value="">
+            <input type="number" min="0" id="facture-after" value="" >
           </div>
           <div id="pourcentage-tip">
             <p>Select Tip %</p>
             <div id="button-pourcentage">
-              <button id="cinq-pourcent" value="5"> 5%</button>
-              <button id="dix-pourcent" value="10"> 10%</button>
-              <button id="quinze-pourcent" value="15"> 15%</button>
-              <button id="vingt-cinq-pourcent" value="25"> 25%</button>
-              <button id="cinquante-pourcent" value="50"> 50%</button>
-              <input type="number" id="poucentage-custom" min="0" placeholder="Custom">
-
-
+              <button  id="cinq-pourcent pourcentage" value="5"> 5% </button>
+              <button  id="dix-pourcent  pourcentage"  value="10"> 10% </button>
+              <button  id="quinze-pourcent pourcentage" value="15"> 15% </button>
+              <button  id="vingt-cinq-pourcent pourcentage" value="25"> 25% </button>
+              <button  id="cinquante-pourcent pourcentage" value="50"> 50% </button>
+              <input type="number" id="pourcentage-custom" min="0" value="">
             </div>
           </div>
           <div id="nombre-pers">
             <label for="divis-pers" id="pers-label">
               Number of People 
             </label>
-            <input type="number"  min="0" id="divis-pers" >
+            <input type="number"  min="0" id="divis-pers" value="" >
 
           </div>
         </section>
@@ -42,14 +40,15 @@
           <div id="montant-total-pers">
             <div id="total-tip-pers">
               <p class="text-total">Tip Amount <span>/ person</span></p>
-              <p id="tips-person"></p>
+              <p id="tips-person"> 0.00</p>
             </div>
             <div id="total-pers">
               <p class="text-total">Total <span>/ person</span></p>
-              <p id="total-person"></p>
+              <p id="total-person"> 0.00</p>
             </div>
           </div>
-          <button type="reset"> RESET</button>
+          <button id="reset" type="reset"> RESET</button>
+          
         </section>
       </article>
     </main>

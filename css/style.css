@@ -212,7 +212,8 @@ body main#splitter-body article section#facture div#pourcentage-tip div#button-p
   }
 }
 
-body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage button {
+body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage button,
+body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input {
   width: 146.63px;
   height: 48px;
   background-color: #00494d;
@@ -220,20 +221,23 @@ body main#splitter-body article section#facture div#pourcentage-tip div#button-p
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
-  body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage button {
+  body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage button,
+  body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input {
     width: 117px;
   }
 }
 
-body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage button:focus {
+body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage button:focus,
+body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input:focus {
   color: #00494d;
   background-color: #26c0ab;
 }
 
-body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input {
+body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input#poucentage-custom {
   width: 146.63px;
   height: 48px;
   background-color: #f3f9fa;
@@ -244,12 +248,12 @@ body main#splitter-body article section#facture div#pourcentage-tip div#button-p
   outline-style: none;
 }
 
-body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input:focus {
+body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input#poucentage-custom:focus {
   border: 3px solid green;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
-  body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input {
+  body main#splitter-body article section#facture div#pourcentage-tip div#button-pourcentage input#poucentage-custom {
     width: 117px;
   }
 }
@@ -298,7 +302,7 @@ body main#splitter-body article section#facture div#nombre-pers label span {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: #E17457;
+  color: #e17457;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -341,7 +345,7 @@ body main#splitter-body article section#facture div#nombre-pers input:focus {
 }
 
 body main#splitter-body article section#facture div#nombre-pers input:focus.error {
-  border: 3px solid #E17457;
+  border: 3px solid #e17457;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -412,6 +416,7 @@ body main#splitter-body article section#resultat div#montant-total-pers div#tota
   body main#splitter-body article section#resultat div#montant-total-pers div#total-tip-pers,
   body main#splitter-body article section#resultat div#montant-total-pers div#total-pers {
     height: 71px;
+    max-width: 333px;
   }
 }
 
@@ -439,6 +444,15 @@ body main#splitter-body article section#resultat div#montant-total-pers div#tota
   width: 96px;
   height: 47px;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   font-size: 32px;
   line-height: 47px;
   text-align: right;
@@ -451,8 +465,12 @@ body main#splitter-body article section#resultat div#montant-total-pers div#tota
   body main#splitter-body article section#resultat div#montant-total-pers div#total-tip-pers p#total-person,
   body main#splitter-body article section#resultat div#montant-total-pers div#total-pers p#tips-person,
   body main#splitter-body article section#resultat div#montant-total-pers div#total-pers p#total-person {
+    width: 143px;
+    height: 71px;
     font-size: 48px;
     line-height: 71px;
+    font-size: 48px;
+    font-weight: 700;
   }
 }
 
